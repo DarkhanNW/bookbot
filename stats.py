@@ -1,12 +1,14 @@
-path_to_file = "books/frankenstein.txt"
+def open_utf8(filename, mode='r'):
+    return open(filename, mode, encoding="utf-8")
+
 def get_word_count(path_to_file):
-    with open(path_to_file) as f: 
+    with open_utf8(path_to_file) as f: 
         book_text = f.read()
         return len(book_text.split())
 
 def character_count(path_to_file):
     character_dict = {}
-    with open(path_to_file) as f:
+    with open_utf8(path_to_file) as f:
         book_text = f.read()
         lowercase_book_text = book_text.lower()
         character_list = list(lowercase_book_text)

@@ -1,5 +1,5 @@
 import sys
-from stats import get_word_count, character_count
+from stats import open_utf8, get_word_count, character_count
 
 def main():
     if len(sys.argv) != 2:
